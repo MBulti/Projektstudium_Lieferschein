@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="App_Lieferschein.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:App_Lieferschein.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent Title="Load" ContentTemplate="{DataTemplate views:LoadingView}" Route="LoadingView" />
+    <ShellContent Title="Login" ContentTemplate="{DataTemplate views:LoginView}" Route="LoginView"/>
+    <ShellContent Title="Main" ContentTemplate="{DataTemplate views:MainView}" Route="MainView" />
+</Shell>
