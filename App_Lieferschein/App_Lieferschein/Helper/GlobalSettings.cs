@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace App_Lieferschein
+namespace App_Lieferschein.Helper
 {
     public class GlobalSettings
     {

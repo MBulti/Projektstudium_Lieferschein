@@ -18,7 +18,12 @@ namespace App_Lieferschein.ViewModels
             Preferences.Set(nameof(App.GlobalSettings.UserInfo), JsonConvert.SerializeObject(userDetails));
             App.GlobalSettings.UserInfo = userDetails;
 
-            await Shell.Current.GoToAsync($"//{nameof(MainView)}");
+            await Shell.Current.GoToAsync($"//{nameof(MainView)}", true, new Dictionary<string, object>()
+            {
+                {
+                    ParameterKeys.DELIVERYNOTE, "Test"
+                }
+            });
         }
         #endregion
     }
