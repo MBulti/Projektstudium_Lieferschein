@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App_Lieferschein.Services
 {
-    internal class DataService
+    public class DataService : IDataService
     {
     }
 }

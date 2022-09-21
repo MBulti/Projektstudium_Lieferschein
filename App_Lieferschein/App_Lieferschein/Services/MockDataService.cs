@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App_Lieferschein.Services
 {
-    public interface IDataService
+    public class MockDataService : IDataService
     {
     }
 }

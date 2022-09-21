@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App_Lieferschein.Services
 {
-    public class LoginService : ILoginService
+    public class MockLoginService : ILoginService
     {
         public async Task<bool> Login(string username, string password)
         {

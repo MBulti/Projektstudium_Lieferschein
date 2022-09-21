@@ -8,6 +8,11 @@ namespace App_Lieferschein.Helper
 {
     public class GlobalSettings
     {
+        public GlobalSettings(bool isMock)
+        {
+            IsMock = isMock;
+        }
+        public bool IsMock { get; set; }
         public UserInfoModel UserInfo { get; set; }
     }
 }

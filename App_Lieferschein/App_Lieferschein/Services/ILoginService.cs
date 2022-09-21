@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace App_Lieferschein.Services
 {
-    internal class ILoginService
+    public interface ILoginService
     {
+        Task<bool> Login(string username, string password);
     }
 }

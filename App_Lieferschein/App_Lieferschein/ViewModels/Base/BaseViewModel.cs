@@ -9,5 +9,10 @@ namespace App_Lieferschein.ViewModels.Base
 
         [ObservableProperty]
         private string title;
+
+        public BaseViewModel()
+        {
+
+        }
     }
 }

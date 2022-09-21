@@ -11,13 +11,17 @@ namespace App_Lieferschein.ViewModels
     [QueryProperty(nameof(DeliveryNote), ParameterKeys.DELIVERYNOTE)]
     public partial class MainViewModel : BaseViewModel
     {
+        #region Properties
+        [ObservableProperty]
+        string deliveryNote;
+        #endregion
+
+        #region Public
         public MainViewModel()
         {
 
         }
-
-        [ObservableProperty]
-        string deliveryNote;
+        #endregion
 
         #region Commands
         [RelayCommand]

@@ -14,11 +14,20 @@ public static class MauiProgram
 			});
 
 		#region Services
-		
-		#endregion
+        if (App.GlobalSettings.IsMock)
+        {
+            builder.Services.AddSingleton<ILoginService, MockLoginService>();
+            builder.Services.AddSingleton<IDataService, MockDataService>();
+        } 
+        else
+        {
+            builder.Services.AddSingleton<ILoginService, LoginService>();
+            builder.Services.AddSingleton<IDataService, DataService>();
+        }
+        #endregion
 
-		#region Views
-		builder.Services.AddSingleton<LoadingView>();
+        #region Views
+        builder.Services.AddSingleton<LoadingView>();
         builder.Services.AddSingleton<LoginView>();
         builder.Services.AddSingleton<MainView>();
         #endregion

@@ -5,7 +5,7 @@
              Title="MainView">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="{Binding DeliveryNote}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Button Text="SingOut" Command="{Binding SignoutCommand}" VerticalOptions="End"/>
