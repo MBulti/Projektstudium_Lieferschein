@@ -1,4 +1,7 @@
-﻿namespace App_Lieferschein;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace App_Lieferschein;
 
 public static class MauiProgram
 {
@@ -7,6 +10,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+            .UseMauiCommunityToolkit()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -27,15 +31,17 @@ public static class MauiProgram
         #endregion
 
         #region Views
-        builder.Services.AddSingleton<LoadingView>();
-        builder.Services.AddSingleton<LoginView>();
-        builder.Services.AddSingleton<MainView>();
+        builder.Services.AddTransient<LoadingView>();
+        builder.Services.AddTransient<LoginView>();
+        builder.Services.AddTransient<MainView>();
+        builder.Services.AddTransient<SignatureView>();
         #endregion
 
         #region ViewModels
         builder.Services.AddTransient<LoadingViewModel>();
         builder.Services.AddTransient<LoginViewModel>();
         builder.Services.AddTransient<MainViewModel>();
+        builder.Services.AddTransient<SignatureViewModel>();
         #endregion
 
         return builder.Build();

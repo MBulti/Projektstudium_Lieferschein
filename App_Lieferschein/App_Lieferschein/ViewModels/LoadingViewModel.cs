@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace App_Lieferschein.ViewModels
 {
@@ -28,7 +23,12 @@ namespace App_Lieferschein.ViewModels
                 Preferences.Remove(nameof(App.GlobalSettings.UserInfo));
                 var userInfo = JsonConvert.DeserializeObject<UserInfoModel>(userDetailsStr);
                 App.GlobalSettings.UserInfo = userInfo;
-                await Shell.Current.GoToAsync($"//{nameof(MainView)}");
+                await Shell.Current.GoToAsync($"//{nameof(MainView)}", false, new Dictionary<string, object>()
+                {
+                    {
+                        ParameterKeys.USERNAME, userInfo.UserName
+                    }
+                });
             }
         }
     }

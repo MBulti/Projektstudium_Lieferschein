@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+             x:Class="App_Lieferschein.Views.SignatureView"
+             Title="{Binding DeliveryNote}">
+    <VerticalStackLayout Spacing="20">
+        <!--Rotation="90"-->
+        <mct:DrawingView BackgroundColor="LightGray" WidthRequest="500" HeightRequest="200" 
+                         IsMultiLineModeEnabled="True" LineWidth="5" Lines="{Binding Lines, Mode=TwoWay}">
+        </mct:DrawingView>
+        <Button Text="Clear" Command="{Binding ClearSignatureCommand}"/>
+        <Button Text="Get" Command="{Binding GetSignatureCommand}"/>
+        <Image Source="{Binding ImgSource, Mode=TwoWay}" BackgroundColor="White" WidthRequest="600" HeightRequest="200"/>
+    </VerticalStackLayout>
+</ContentPage>

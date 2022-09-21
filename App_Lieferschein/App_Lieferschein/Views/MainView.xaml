@@ -3,11 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Lieferschein.Views.MainView"
              Title="MainView">
-    <VerticalStackLayout>
-        <Label 
-            Text="{Binding DeliveryNote}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout Spacing="10">
+        <Label Text="{Binding UserName}"/>
+        <Button Text="Sign" Command="{Binding SignCommand}" VerticalOptions="End"/>
         <Button Text="SingOut" Command="{Binding SignoutCommand}" VerticalOptions="End"/>
     </VerticalStackLayout>
 </ContentPage>

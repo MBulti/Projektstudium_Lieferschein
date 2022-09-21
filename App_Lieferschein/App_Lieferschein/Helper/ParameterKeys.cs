@@ -8,6 +8,7 @@ namespace App_Lieferschein.Helper
 {
     public class ParameterKeys
     {
+        public const string USERNAME = "USERNAME";
         public const string DELIVERYNOTE = "DELIVERYNOTE";
     }
 }
