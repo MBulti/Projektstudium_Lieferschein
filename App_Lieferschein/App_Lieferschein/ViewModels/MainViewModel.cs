@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using App_Lieferschein.Services;
-using CommunityToolkit.Mvvm.ComponentModel;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Controls.Shapes;
-
-namespace App_Lieferschein.ViewModels
+﻿namespace App_Lieferschein.ViewModels
 {
     [QueryProperty(nameof(UserName), ParameterKeys.USERNAME)]
     public partial class MainViewModel : BaseViewModel

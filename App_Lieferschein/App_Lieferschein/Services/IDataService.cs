@@ -8,5 +8,6 @@ namespace App_Lieferschein.Services
 {
     public interface IDataService
     {
+        Task<Stream> GetPDFStream(string deliveryNote);
     }
 }

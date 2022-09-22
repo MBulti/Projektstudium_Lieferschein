@@ -1,5 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace App_Lieferschein.ViewModels
 {

@@ -10,7 +10,10 @@ public partial class App : Application
 
     public App()
 	{
-		InitializeComponent();
+        // register syncfusion licence
+        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NzIxMzQzQDMyMzAyZTMyMmUzMEw3emdRMnYzNUxaV0dPYmZGN3dMSXhlc3Y3SDZUKzRxQitrRlNGTGhmMXM9");
+
+        InitializeComponent();
 
 		MainPage = new AppShell();
 	}

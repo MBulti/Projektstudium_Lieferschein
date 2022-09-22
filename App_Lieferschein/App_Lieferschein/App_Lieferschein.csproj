@@ -15,7 +15,7 @@
 		<ApplicationTitle>App_Lieferschein</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.app_lieferschein</ApplicationId>
+		<ApplicationId>com.m_bulti.app_lieferschein</ApplicationId>
 		<ApplicationIdGuid>2B1A0D65-6D08-4518-9F46-20E4BF17E384</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -49,9 +49,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Platforms\Android\Resources\xml\provider_paths.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Maui" Version="1.3.0" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	  <PackageReference Include="Syncfusion.Pdf.Imaging.NET" Version="20.2.0.50" />
 	</ItemGroup>
 
 	<ItemGroup>

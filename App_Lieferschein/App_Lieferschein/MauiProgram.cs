@@ -1,7 +1,4 @@
-﻿using CommunityToolkit.Maui;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace App_Lieferschein;
+﻿namespace App_Lieferschein;
 
 public static class MauiProgram
 {
